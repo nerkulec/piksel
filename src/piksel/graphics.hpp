@@ -28,6 +28,9 @@ public:
     void applyMatrix(float a, float b, float c, float d, float e, float f);
     void background(glm::vec4 color);
     void ellipse(float x, float y, float w, float h);
+    void ellipse(float w, float h){
+        ellipse(0, 0, w, h);
+    }
     void ellipseMode(DrawMode ellipseMode);
     void fill(glm::vec4 color);
     void image(Image& img, float dx, float dy, float dWidth, float dHeight, float sx, float sy, float sWidth, float sHeight);
@@ -42,6 +45,9 @@ public:
     void pop();
     void push();
     void rect(float x, float y, float w, float h);
+    void rect(float w, float h){
+        rect(0, 0, w, h);
+    }
     void rectMode(DrawMode rectMode);
     void resetFont();
     void resetMatrix();
@@ -50,6 +56,9 @@ public:
     void stroke(glm::vec4 color);
     void strokeWeight(float weight);
     void text(std::string str, float x, float y);
+    void text(std::string str){
+        text(str, 0, 0);
+    }
     void textFont(Font& font);
     void textSize(float size);
     void tint(glm::vec4 color);
